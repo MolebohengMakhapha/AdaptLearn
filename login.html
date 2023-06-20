@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="mobile-wrapper">
+
+        <div class="register-title">Login</div>
+        <div class="register-form-wrapper">
+            <form class="register-form" action="#">
+                <div class="input-wrapper">
+                    <div class="profile-wrapper">
+                        <i class="fas fa-user profile-icon"></i>
+                    </div>
+                    <div class="input-group profile-input-group">
+                        <input type="email" name="email" id="email" placeholder="E-mail">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                </div>
+                <button class="register-btn" onclick="checkEmail()"><a href="landingPage.html" style="color: white;">Login</a></button>
+
+            </form>
+        </div>
+
+        <p class="help-text">Don't have an account?<span><a href="signup.html" id="login"> Sign Up</a></span></p>
+
+    </div>
+    
+</body>
+<script>
+    function checkEmail() {
+    var email = document.getElementById("email").value.toLowerCase();
+  
+    if (email === "lebo@gmail.com") {
+      window.location.href = "landingPage.html";
+      document.body.classList.add("green");
+    } else if (email === "jane@gmail.com") {
+      window.location.href = "landingPage.html";
+      document.body.classList.add("blue");
+    } else {
+      alert("Invalid email address");
+    }
+  }
+  
+  </script>
+</html>
